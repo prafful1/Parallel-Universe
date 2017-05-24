@@ -14,7 +14,8 @@ Well why not. We use great algorithms to optimize our code. Why not harness our 
 Java is one of the most popular languages used by developers. So for this repository all the programs will be written using Java 8. It provides a unique implementation of Fork/Join to obtain parallelism.
 
 #	Why Java 8?
-+ Fork/Join introduces thread specific task queues and work-stealing algorithm. 
++ Fork/Join was introduced in Java 7 and has greatly improved in Java 8. 
++ Thread specific task queues and work-stealing algorithm were the major enhancements introduced by Java 7. 
 +	This new implementation improves task processing time leading to faster execution.
 ![alt text](https://github.com/prafful1/Parallel-Universe/blob/master/fork%20join.jpg)
 
