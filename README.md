@@ -11,10 +11,10 @@ We take problems that can be divided into subtasks which further can be approach
 Well why not. We use great algorithms to optimize our code. Why not harness our computing power to make our programs run even faster.
 
 # What tools do we use? 
-Java is one of the most popular languages used by developers. So for this repository all the programs will be written using Java 8. It provides a unique implementation of ForkJoinPool to obtain parallelism.
+Java is one of the most popular languages used by developers. So for this repository all the programs will be written using Java 8. It provides a unique implementation of Fork/Join to obtain parallelism.
 
 #	Why Java 8?
-+ ForkJoinPool introduces thread specific task queues and work-stealing algorithm. 
++ Fork/Join introduces thread specific task queues and work-stealing algorithm. 
 +	This new implementation improves task processing time leading to faster execution.
 ![alt text](https://github.com/prafful1/Parallel-Universe/blob/master/fork%20join.jpg)
 
