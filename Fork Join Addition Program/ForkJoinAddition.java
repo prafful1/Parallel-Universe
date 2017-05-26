@@ -35,7 +35,7 @@ class CalculateSum extends RecursiveTask<Long>{
 	}
 	
 	// This class is called everytime a new task is forked.
-	// It return a Long value which is sum of all elements  
+	// It returns a Long value which is sum of all elements  
 	// of the array of the subtask.
 	@Override
 	protected Long compute(){
