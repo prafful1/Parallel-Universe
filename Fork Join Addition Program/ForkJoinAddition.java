@@ -9,11 +9,11 @@ Windows 7 Enterprise 64-bit (6.1, Build 7601) Service Pack 1
 Java Info:
 java version "1.8.0_51"
 
-
+This problem is solved both in parallel withh FORK/JOIN framework and also by a single thread.
 This program fills an array of desired size with random values.
 It later returns the sum of all elements of the array.
 
-This problem is solved both in parallel withh FORK/JOIN framework and also by a single thread.
+
 After many experiments THRESHOLD_VALUE was decided to keep between 10000 to 999999.
 Input array size varied between 40000000 to 99999999.
 Performance consistently improved from 15% to more than 100% with Fork/Join framework compared to a single threaded solution.
