@@ -1,4 +1,3 @@
-
 package webCrawler;
 
 import java.net.URL;
@@ -10,24 +9,30 @@ import org.htmlparser.filters.NodeClassFilter;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.util.NodeList;
 
-class LinkFinderAction extends RecursiveAction {
+
+/* 
+Implements parallel crawler. 
+*/ 
+class ParallelLinkFinder extends RecursiveAction {
 
     private String url;
-    private LinkHandler cr;
+    private WebLinksHandler cr;
 	private static int crawlerFlag = 0;
+	private static int maxLinksToVisit = 0;
     /**
      * Used for statistics
      */
     private static final long t0 = System.currentTimeMillis();
 
-    public LinkFinderAction(String url, LinkHandler cr) {
+    public ParallelLinkFinder(String url, WebLinksHandler cr, int maxLinksToVisit) {
         this.url = url;
         this.cr = cr;
+		ParallelLinkFinder.maxLinksToVisit = maxLinksToVisit;
     }
 
     @Override
     public void compute() {
-		if(LinkFinderAction.crawlerFlag == 1)
+		if(ParallelLinkFinder.crawlerFlag == 1)
 			return;
 		
         if (!cr.visited(url)) {
@@ -38,28 +43,27 @@ class LinkFinderAction extends RecursiveAction {
                 NodeList list = parser.extractAllNodesThatMatch(new NodeClassFilter(LinkTag.class));
 
                 for (int i = 0; i < list.size(); i++) {
-					if(LinkFinderAction.crawlerFlag == 1)
+					if(ParallelLinkFinder.crawlerFlag == 1)
 						break;
                     LinkTag extracted = (LinkTag) list.elementAt(i);
 
                     if (!extracted.extractLink().isEmpty()
                             && !cr.visited(extracted.extractLink())) {
 
-                        actions.add(new LinkFinderAction(extracted.extractLink(), cr));
+                        actions.add(new ParallelLinkFinder(extracted.extractLink(), cr, ParallelLinkFinder.maxLinksToVisit));
                     }
                 }
                 cr.addVisited(url);
 
-                if (cr.size() == 100) {
-					 System.out.println("Time for visit 100 distinct links= " + (System.currentTimeMillis() - t0)); 
-					LinkFinderAction.crawlerFlag = 1;
+                if (cr.size() == ParallelLinkFinder.maxLinksToVisit) {
+					ParallelLinkFinder.crawlerFlag = 1;
 					return;
                 }
 
                 //invoke recursively
                 invokeAll(actions);
             } catch (Exception e) {
-                //ignore 404, unknown protocol or other server errors
+               
             }
         }
     }
