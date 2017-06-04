@@ -63,7 +63,7 @@ public class WebCrawlerImplementation implements WebLinksHandler {
 		//Parallel threaded solution
 		Long startTime = System.currentTimeMillis();
         WebCrawlerImplementation wb = new WebCrawlerImplementation("http://www.javaworld.com", 64);
-		wb.startCrawlingParallel(100);
+		wb.startCrawlingParallel(100); //No of links to visit
 		Long stopTime = System.currentTimeMillis();
         Long forkedThreadTimes = (stopTime - startTime);
         System.out.println("Fork / join search took " + forkedThreadTimes + "ms" + " to visit " + wb.size() + " links");
@@ -71,7 +71,7 @@ public class WebCrawlerImplementation implements WebLinksHandler {
 		//Single threaded solution
 		startTime = System.currentTimeMillis();
 		WebCrawlerImplementation wb2 = new WebCrawlerImplementation();
-	    	int allowedLinksToVisit = 100;
+	    	int allowedLinksToVisit = 100; //No of links to visit.
 		wb2.startCrawlingSequential("http://www.javaworld.com",allowedLinksToVisit);
 		stopTime = System.currentTimeMillis();
 		Long singleThreadTimes = (stopTime - startTime);
