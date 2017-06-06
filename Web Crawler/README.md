@@ -15,8 +15,10 @@ It is an interface and is implemented by WebCrawlerImplementation. It helps WebC
 Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz (4 CPUs), ~2.6GHz,8192MB RAM, Windows 7 Enterprise 64-bit (6.1, Build 7601) Service Pack 1
 
 # Performance difference between Single threaded and Multiple threaded solution: (This output will be different for different users depending on source link and internet speed)
++ # First Trial:
 + Fork / join search took 21787ms to visit 124 links
 + Single threaded time 387017ms to visit 100 links
 
++ # Second Trial:
 + Fork / join search took 25138ms to visit 124 links
 + Single threaded time 484218ms to visit 100 links
