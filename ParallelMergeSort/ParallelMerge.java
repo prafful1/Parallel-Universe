@@ -68,7 +68,7 @@ class ParallelMergeUtil extends RecursiveAction{
 			}
 			else
 			{
-				//System.out.println("k :" + arr[k] + "i :" + arr[i] );
+				
 				arrTemp[temp] = arr[k];
 				temp = temp + 1;
 				k = k + 1;
@@ -87,8 +87,7 @@ class ParallelMergeUtil extends RecursiveAction{
 		{
 			while(i <= mid)
 			{
-				//System.out.println("mid: " + arr[i]);
-				//System.out.println("temp: " + temp);
+				
 				arrTemp[temp] = arr[i];
 				temp = temp + 1;
 				i = i + 1;
@@ -98,7 +97,7 @@ class ParallelMergeUtil extends RecursiveAction{
 		for(int j = low; j <= high; j++)
 		{
 			
-			//System.out.println( v +  " ada" + arrTemp[v]);
+			
 			arr[j] = arrTemp[v];
 			v = v + 1;
 		}
@@ -157,9 +156,6 @@ public class ParallelMerge{
         Long singleThreadTimes = (stopTime - startTime);
         System.out.println("Single Threaded Times: " + singleThreadTimes + "ms" + " to sort " + size + " elements");
 		
-		/*for(int i=0;i<size;i++)
-		{
-			System.out.println(obj.arr[i]);
-		}*/
+		
 	}
 }
