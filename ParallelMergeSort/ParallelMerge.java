@@ -16,6 +16,7 @@ class ParallelMergeUtil extends RecursiveAction{
 		this.threshold = threshold;
 	}
 	
+	// Sequential merge sort call
 	public void mergeSort(int low,int high)
 	{
 		if(low < high)
@@ -28,6 +29,7 @@ class ParallelMergeUtil extends RecursiveAction{
 		}
 	}
 	
+	// Parallel merge sort call
 	@Override
 	public void compute()
 	{
@@ -48,6 +50,7 @@ class ParallelMergeUtil extends RecursiveAction{
 		merge(start,mid,end);
 	}
 	
+	// Sequential merge method used by both solutions
 	public void merge(int low,int mid,int high)
 	{
 		//System.out.println(low + " " + mid + " " + high);
@@ -131,7 +134,6 @@ public class ParallelMerge{
 		Random r = new Random();
 		for(int i=0;i<size;i++)
 		{
-			//obj.arr[i] = Integer.parseInt(br.readLine());
 			obj.arr[i] = r.nextInt(101);
 		}
 		
@@ -146,7 +148,6 @@ public class ParallelMerge{
 		
 		for(int i=0;i<size;i++)
 		{
-			//obj.arr[i] = Integer.parseInt(br.readLine());
 			obj.arr[i] = r.nextInt(101);
 		}
 		
