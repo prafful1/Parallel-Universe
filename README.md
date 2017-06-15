@@ -1,5 +1,5 @@
 # Parallel-Universe
-Here we make an optimized code run even faster by harnessing computational power. PROGRAMS FROM VARIOUS DOMAINS ARE PART OF THIS REPO. 
+Here we make an optimized code run even faster by harnessing computational power
 
 # What do we do here (For people who don't like to read)? 
 ![alt text](https://github.com/prafful1/Parallel-Universe/blob/master/fork-and-join.png)
