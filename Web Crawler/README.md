@@ -12,7 +12,7 @@ This class contains the business logic for traversing through web links in a seq
 It is an interface and is implemented by WebCrawlerImplementation. It helps WebCrawlerImplementation to manage parallel web links traversal in a better way. 
 
 # System Info:
-Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz (4 CPUs), ~2.6GHz,8192MB RAM, Windows 7 Enterprise 64-bit (6.1, Build 7601) Service Pack 1
+Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz (4 CPUs), ~2.6GHz,8192MB RAM, Windows 7 Enterprise 64-bit (6.1, Build 7601) Service Pack 1.
 
 # Performance difference between Single threaded and Multiple threaded solution: (This output will be different for different users depending on source link and internet speed)
 + # First Trial:
