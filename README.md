@@ -5,7 +5,7 @@ Here we make an optimized code run even faster by harnessing computational power
 ![alt text](https://github.com/prafful1/Parallel-Universe/blob/master/fork-and-join.png)
 
 # (For people who like to read)?  
-We take problems that can be divided into subtasks which further can be approached individually. We solve these problems in parallel. Basically we solve problems with divide and conquer technique in parallel.
+We take problems that can be divided into subtasks which further can be approached individually. We solve these problems in parallel. Basically we solve problems with divide and conquer technique in parallel
 
 # Why should I use this approach? 
 Well why not. We use great algorithms to optimize our code. Why not harness our computing power to make our programs run even faster.
